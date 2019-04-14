@@ -1,0 +1,1 @@
+Dockerfile for building a __working__ version of Autopsy for Linux. Unfotunately, their guidance for installing sucks and misses a lot of problems. This dockerfile successfully builds and runs as of writing.
