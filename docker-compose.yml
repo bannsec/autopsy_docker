@@ -4,14 +4,11 @@ services:
         image: bannsec/autopsy:latest
         container_name: autopsy
         shm_size: "2gb"
-        command: "/opt/autopsy-4.13.0/bin/autopsy"
         volumes:
             - /tmp/.X11-unix:/tmp/.X11-unix
             - ./case/:/root/case
         environment:
             - DISPLAY=${DISPLAY}
-            - JAVA_HOME=/opt/jdk1.8.0_201
-            - PATH=/opt/autopsy-4.13.0/bin:/opt/jdk1.8.0_201/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
         networks:
             - host
 

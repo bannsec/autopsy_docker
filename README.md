@@ -27,7 +27,7 @@ $ docker run \
 Just run:
 
 ```
-$ docker-compose up -d
+$ xhost + && docker-compose up -d
 ```
 
 ## Loading an image file for a case
