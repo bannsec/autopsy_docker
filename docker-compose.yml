@@ -1,0 +1,16 @@
+version: "3"
+services:
+    autopsy:
+        image: bannsec/autopsy:latest
+        container_name: autopsy
+        shm_size: "2gb"
+        volumes:
+            - /tmp/.X11-unix:/tmp/.X11-unix
+            - ./case/:/root/case
+        environment:
+            - DISPLAY=${DISPLAY}
+        networks:
+            - host
+
+networks:
+    host:
