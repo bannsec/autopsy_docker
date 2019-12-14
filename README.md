@@ -5,12 +5,14 @@ Unfotunately, their guidance for installing sucks and misses a lot of problems.
 This dockerfile successfully builds and runs as of writing.
 
 ## Run
+Note: The `xhost +` command is in the documentation for convienience. It is a security risk (https://laurentschneider.com/wordpress/2007/03/xhost-is-a-huge-security-hole.html). If you have concerns about your X security, please using xauth instead.
 
 ## Using Docker
 
 [source](https://github.com/bannsec/autopsy_docker/issues/1)
 
 ```
+$ xhost +
 $ docker run \
             -d \
             -it \
