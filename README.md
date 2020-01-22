@@ -18,7 +18,7 @@ $ docker run \
             -it \
             --shm-size 2G \
             -v /tmp/.X11-unix:/tmp/.X11-unix \
-            -v ./case/:/root/case
+            -v ./case/:/root/case \
             -e DISPLAY=$DISPLAY \
             --network host \
             bannsec/autopsy
