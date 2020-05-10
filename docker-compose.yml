@@ -9,6 +9,7 @@ services:
             - ./case/:/root/case
         environment:
             - DISPLAY=${DISPLAY}
+            - JAVA_TOOL_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Djdk.gtk.version=3 -Dsun.java2d.opengl=true'
         networks:
             - host
 
