@@ -18,9 +18,11 @@ $ docker run \
             -it \
             --shm-size 2G \
             -v /tmp/.X11-unix:/tmp/.X11-unix \
-            -v ./case/:/root/case \
+            -v $(pwd)/case/:/root/case \
             -e DISPLAY=$DISPLAY \
+            -e JAVA_TOOL_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel' \
             --network host \
+            --device /dev/dri \
             bannsec/autopsy
 ```
 
