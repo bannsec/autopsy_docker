@@ -37,6 +37,7 @@ RUN apt-get update && apt-get install -y \
         xkb-data \
         xorg-sgml-doctools \
         xtrans-dev \
+        libcanberra-gtk-module \
     && rm -rf /var/lib/apt/lists/*
 RUN RELEASE_PATH=`curl -sL https://github.com/sleuthkit/autopsy/releases/latest \
         | grep -Eo 'href=".*.zip' \
